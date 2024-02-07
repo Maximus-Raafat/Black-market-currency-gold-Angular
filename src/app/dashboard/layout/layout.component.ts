@@ -8,11 +8,5 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent {
   constructor(private router:Router) {}
-
-  updatePramater(newName:string):void {
-    console.log(newName)
-    const currentRouter = this.router.url;
-    const updateRoute = currentRouter.replace('home',`${newName}`)
-    this.router.navigateByUrl(updateRoute)
-  }
+  
 }

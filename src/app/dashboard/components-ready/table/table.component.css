@@ -1,7 +1,7 @@
 table{
     --bs-table-hover-bg: #E3AC2A;
     --bs-table-hover-color:#fff;
-    --bs-table-hover-cursor:pointer;
+    cursor: pointer;
     font-size: 1rem;
 }
 table tr td:first-child {
