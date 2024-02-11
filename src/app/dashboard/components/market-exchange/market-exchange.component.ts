@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./market-exchange.component.css']
 })
 export class MarketExchangeComponent {
+currentDate!:Date;
+constructor(){
+  this.currentDate = new Date()
+}
 
 }

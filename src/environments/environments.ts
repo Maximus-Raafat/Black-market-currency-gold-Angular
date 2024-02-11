@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    baseApi:''
-    
+    baseApi:'',
+    imageBase:'assets/imges/'
   };

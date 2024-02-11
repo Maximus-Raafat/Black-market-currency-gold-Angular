@@ -4,23 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 import { MarketExchangeComponent } from './market-exchange/market-exchange.component';
 import { GoldComponent } from './gold/gold.component';
+import { GoldCurreToCurreComponent } from './gold-curre-to-curre/gold-curre-to-curre.component';
 const routes: Routes = [ 
-    {
-        path:'home',
-        component:HomeComponent
-    },
-    {
-        path:'exchange-rate',
-        component:ExchangeRateComponent
-    },
-    {
-        path:'markt-exchange',
-        component:MarketExchangeComponent
-    },
-    {
-        path:'gold',
-        component:GoldComponent
-    }
+   
 ];
 
 

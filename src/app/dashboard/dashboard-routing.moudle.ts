@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ExchangeRateComponent } from './components/exchange-rate/exchange-rate.component';
 import { GoldComponent } from './components/gold/gold.component';
 import { MarketExchangeComponent } from './components/market-exchange/market-exchange.component';
+import { GoldCurreToCurreComponent } from './components/gold-curre-to-curre/gold-curre-to-curre.component';
 const routes: Routes = [ 
 
     {
@@ -15,6 +16,8 @@ const routes: Routes = [
           {path:"gold",component:GoldComponent},
           {path:"exchange-rate",component:ExchangeRateComponent},
           {path:"markt-exchange",component:MarketExchangeComponent},
+          {path:"goldCurreToCurre",component:GoldCurreToCurreComponent},
+
         ]
       }
 ];

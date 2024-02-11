@@ -1,0 +1,18 @@
+.dropdown select{
+    border: solid 1px #c5576a;
+}
+.dropdown select:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+select {
+    text-align: start;
+    margin: 0;
+    font-family: inherit;
+    font-size: 0.900rem;
+    background-color: #F5f5f5;
+    width: 11.26rem;
+}

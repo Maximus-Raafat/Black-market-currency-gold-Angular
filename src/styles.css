@@ -2,10 +2,9 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
 html, body { height: 100%; }
-body { margin: 0;  font-family: "IBM Plex Sans Arabic",sans-serif;}
+body { margin: 0;  font-family: "IBM Plex Sans Arabic",sans-serif;  background-color: #fcfcfc;}
 
 a{
-    
     text-decoration-line: none;
     font-family: "IBM Plex Sans Arabic",sans-serif;
     font-weight: 700;

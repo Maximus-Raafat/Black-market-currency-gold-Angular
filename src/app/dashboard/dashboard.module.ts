@@ -10,6 +10,10 @@ import { CalculatorComponent } from './components-ready/calculator/calculator.co
 import { TableComponent } from './components-ready/table/table.component';
 import { EgExchangeRateAtAllBanksComponent } from './components-ready/eg-exchange-rate-at-all-banks/eg-exchange-rate-at-all-banks.component';
 import { FooterComponent } from './components-ready/footer/footer.component';
+import { GoldCurreToCurreComponent } from './components/gold-curre-to-curre/gold-curre-to-curre.component';
+import { MaterialModule } from '../material/material.module';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { AdsComponent } from './components/ads/ads.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,15 @@ import { FooterComponent } from './components-ready/footer/footer.component';
     CalculatorComponent,
     TableComponent,
     EgExchangeRateAtAllBanksComponent,
-    FooterComponent
+    FooterComponent,
+    GoldCurreToCurreComponent,
+    AdsComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingMoodule,
-    
+    MaterialModule,
+    NgApexchartsModule
   ]
 })
 export class DashboardModule { }

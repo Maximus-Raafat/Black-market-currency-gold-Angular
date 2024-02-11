@@ -1,0 +1,11 @@
+.calculator{
+    background-color: red !important;
+}
+section i{
+    color:#E3AC2A;
+    margin-top: 10px;
+}
+section h3{
+    font-size: 1.7rem;
+    margin: 0px 0px 24px !important;
+}

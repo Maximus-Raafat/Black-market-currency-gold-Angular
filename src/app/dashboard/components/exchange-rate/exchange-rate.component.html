@@ -1,14 +1,32 @@
-<div class="row justify-content-between">
-    <div class="col-lg-7">
-        <div style="background-color: rgb(112, 53, 53); width: calc(100% - 20px);">
-            div 1
-        </div>        
-    </div>
 
-    <div class="col-lg-5">
-        <div style="background-color: antiquewhite;">
-            div 2
-            
-        </div>
-    </div>
-</div>
+    <section>
+        <div class="row justify-content-between">
+            <div class="col-lg-7">
+                <h1>EGP exchange rate at all banks</h1>  
+                <p class="text-dark fw-medium fs-5">Live update for EGP exchange rate at Central Bank of Egypt</p>
+                <p class="text-dark fw-medium"> <i class="fa-regular fa-clock text-muted margin-me-1"></i> {{ currentDate | date:'full' }}</p>
+                <div class="table">
+                    <app-table></app-table>
+                </div>
+              </div>
+        
+            <div class="col-lg-5">
+                <app-calculator></app-calculator>
+                <div class="card my-4">
+                    <div class="card-body">
+                      <h5 class="card-title text-success fs-5 fw-bold mt-3 mb-4">Egyptian Pound</h5>
+                      <p class="card-text text-muted fs-6" style="line-height: 1.8rem;">The Egyptian Pound is the official currency of the Arab Republic of Egypt. It is denoted by the currency code EGP. The Egyptian Pound is further divided into smaller units called piasters or qirsh, with 100 piasters equaling 1 EGP. The currency is issued and regulated by the Central Bank of Egypt.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-4">
+                    <div class="card-body">
+                      <p class="card-text text-muted fs-6" style="line-height: 1.8rem;">
+                        <span class="text-success fs-5 fw-bold mt-3 mb-4">!</span>
+                        The prices are being updated from the official website of the Central Bank of Egypt without any changes, and the prices may come with a slight delay of a few minutes.
+                    </p>
+                    </div>
+                  </div>
+            </div> 
+        </div> 
+    </section>

@@ -1,4 +1,8 @@
+.custom-table{
+    background-color: red !important;
+}
 table{
+    --bs-table-bg: #fcfcfc;
     --bs-table-hover-bg: #E3AC2A;
     --bs-table-hover-color:#fff;
     cursor: pointer;

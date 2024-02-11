@@ -1,0 +1,30 @@
+footer .aboutus a{
+    color:#244450 !important;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2.2;
+}
+footer .aboutus span{
+    color: #363536Bf !important;
+    padding: 0px 10px;
+}
+footer .whatOfferService a{
+    color:#244450 !important;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2.2;
+}
+footer .whatOfferService span{
+    color: #363536Bf !important;
+    padding: 0px 10px;
+}
+footer .lan a{
+    color:#244450 !important;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding:0px 10px ;
+}
+

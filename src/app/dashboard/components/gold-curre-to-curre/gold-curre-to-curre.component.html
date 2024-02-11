@@ -1,0 +1,142 @@
+<!-- <div class="d-flex flex-wrap justify-content-between gap-3 mb-4">
+    <div>
+      <h1 class="h3">EUR / EGP | Black Market</h1>
+      <p class="text-muted fw-bold m-0">gold ounce price in Egypt</p>
+      <p class="d-flex flex-wrap fs-6 m-0 my-5 gap-3 align-items-center ">
+        <b class="fw-bolder" style="font-size: 4rem;" >129,734 </b>
+        <b class="d-flex flex-wrap gap-3">
+            <span class="text-success">0.01392%</span>
+            <span class="text-success">1781</span>
+        </b>
+      </p>
+      <p class="fs-6">Sell Price: <b>126,180 EGP</b>      </p>
+      <p><i class="fa-regular fa-clock text-muted margin-me-1"></i> today time -..</p>
+
+      <div class=" row gap-4" style="background-color: red;">
+        <div class="col-4" style="background-color: red;">1</div>
+        <div class="col-4">1</div>
+
+        <div class="col-4">1</div>
+        <div class="col-4">1</div>
+
+      </div>
+    </div>
+    <div style="background-color: gold;">
+        <div class="d-flex gap-3 align-items-center" style="background-color: rebeccapurple;">
+          <label class="text-small " style="color: #c5576a;">Select a country</label>
+          <div class="dropdown">
+            <select class="form-select" aria-label="Default select example">
+              <option selected >Egypt</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row justify-content-between">
+    <div class="col-lg-7">
+        <div style="overflow: hidden;">
+                <h1 class="h3">EUR / EGP | Black Market</h1>
+                <p class="text-muted fw-bold m-0">gold ounce price in Egypt</p>
+                <p class="d-flex flex-wrap fs-6 m-0 my-5 gap-3 align-items-center ">
+                  <b class="fw-bolder" style="font-size: 4rem;" >129,734 </b>
+                  <b class="d-flex flex-wrap gap-3">
+                      <span class="text-success">0.01392%</span>
+                      <span class="text-success">1781</span>
+                  </b>
+                </p>
+                <p class="fs-6">Sell Price: <b>126,180 EGP</b>      </p>
+                <p><i class="fa-regular fa-clock text-muted margin-me-1"></i> today time -..</p>
+          
+                <div class="row g-3 my-2" >
+                  <div class="col-lg-6 col-12">
+                    <h2 class="hr-lines"></h2>
+                    <a class="hover-bg-primary fw-medium m-0 p-2 d-inline-block fs-6 border-warning border-5 border-start" routerLink="#"> 
+                        <span class="text-dark">gold ounce</span>
+                        <span class="mx-2 fw-semibold text-danger">1,883.40</span>
+                        <span class="text-muted">Euro</span>
+                    </a>
+            </div>
+                <div class="col-lg-6 col-12">
+                    <h2 class="hr-lines"></h2>
+                    <a class="hover-bg-primary fw-medium m-0 p-2 d-inline-block fs-6 border-warning border-5 border-start" routerLink="#">
+                        <span class="text-dark">gold ounce</span>
+                        <span class="mx-2 fw-semibold text-danger">1,883.40</span>
+                        <span class="text-muted">Euro</span>    
+                    </a>
+                  </div>
+                   <div class="col-lg-6 col-12">
+                    <h2 class="hr-lines"></h2>
+                    <a class="hover-bg-primary fw-medium d-inline-block p-2 fs-6  border-dark border-5 border-start" routerLink="#">
+                        <span class="text-dark">gold ounce</span>
+                        <span class="mx-2 fw-semibold text-danger">1,883.40</span>
+                        <span class="text-muted">Euro</span>    
+                    </a>
+                  </div>
+                   <div class="col-lg-6 col-12">
+                    <h2 class="hr-lines"></h2>
+                    <a class="hover-bg-primary fw-medium d-inline-block p-2 fs-6  border-dark border-5 border-start" routerLink="#">
+                        <span class="text-dark">gold ounce</span>
+                        <span class="mx-2 fw-semibold text-danger">1,883.40</span>
+                        <span class="text-muted">Euro</span>    
+                    </a>
+
+                  </div>          
+                </div>
+                <div>
+                    <div class="bg-white p-3 rounded-1 "></div>
+                    <div id="chart" class="col-12">
+                        <apx-chart
+                          [series]="chartOptions.series!"
+                          [chart]="chartOptions.chart!"
+                          [xaxis]="chartOptions.xaxis!"
+                          [dataLabels]="chartOptions.dataLabels!"
+                          [grid]="chartOptions.grid!"
+                          [stroke]="chartOptions.stroke!"
+                          [title]="chartOptions.title!"
+                        ></apx-chart>
+                      </div>
+                      
+               </div>
+            </div>     
+    </div>
+
+    <div class="col-lg-5">
+            <div class="d-flex justify-content-end">
+                <div class="d-flex gap-3 align-items-center">
+                  <label class="text-small " style="color: #c5576a;">Select a country</label>
+                  <div class="dropdown">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected >Egypt</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+            </div>            
+        </div>
+        <div>
+          <app-calculator></app-calculator>
+        </div>
+      
+    </div>
+
+    <div class="col-12 row justify-content-between">
+
+      <div class="col-7">
+        <div class="Exchange rate of Swedish Krona in all Egyptian banks">
+          <h4 style="font-size: 1.45rem;">Exchange rate of Swedish Krona in all Egyptian banks</h4>
+          <app-table></app-table>
+         </div>
+      </div>
+     <div class="col-5">
+        <h4 style="font-size: 1.45rem;">SEK to EGP in Black Market
+        </h4>
+        <app-table></app-table>
+    </div>
+    </div>
+    
+</div>
