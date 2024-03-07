@@ -1,4 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 import {
   ChartComponent,
@@ -27,11 +28,41 @@ export type ChartOptions = {
   templateUrl: './gold-curre-to-curre.component.html',
   styleUrls: ['./gold-curre-to-curre.component.css']
 })
-export class GoldCurreToCurreComponent {
+export class GoldCurreToCurreComponent implements OnInit, AfterViewInit{
+  data:any;
   @ViewChild("chart") chart?: ChartComponent;
-  public chartOptions: Partial<ChartOptions>;
+  currentDate:Date;
+  public chartOptions!: Partial<ChartOptions>;
 
-  constructor() {
+  constructor(private route:ActivatedRoute) {
+    this.currentDate = new Date();
+    this.chartData();
+  }
+ngOnInit(): void {
+  this.route.params.subscribe(params => {
+    this.data = history.state.data;
+    this.deleteProperty();
+  });
+  // console.log("param",this.data)
+  
+}
+ngAfterViewInit(): void {
+  // this.checkon();
+}
+deleteProperty(): void {
+  if (this.data.param2[0].imageUrl) {
+    this.data.param2.forEach((item:any) => {
+      delete item.iconName;
+    });
+    
+  } else{
+    console.log("DON'T HAS A DATA");
+  }
+
+}
+
+
+chartData(){
     this.chartOptions = {
       series: [
         {
@@ -76,6 +107,7 @@ export class GoldCurreToCurreComponent {
         ]
       }
     };
-  }
+
+}
 
 }

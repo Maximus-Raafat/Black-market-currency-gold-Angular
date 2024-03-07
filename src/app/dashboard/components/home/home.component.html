@@ -1,3 +1,4 @@
+
 <section>
     <div class="row justify-content-between">
         <div class="col-lg-7">
@@ -5,12 +6,12 @@
                 <a routerLink="#" class="link-secondary">Egypt gold prices</a>
                 <a routerLink="#" class="link-dark fs-5 fw-normal"><i class="fa-solid fa-angle-right" style="position: relative; top: 2px; right: 4px;"></i>gold calculator</a>
             </h2>
-                <app-table></app-table>
+                <app-table [namesTableLable]="arrGold" [nameOfFolder]="'gold'" [itemsTable]="goldPrice"></app-table>
               <h2 class="d-flex justify-content-between">
                 <a routerLink="#" class="link-secondary">Black Market exchange rate</a>
                 <a routerLink="#" class="link-dark fs-5 fw-normal"><i class="fa-solid fa-angle-right" style="position: relative; top: 1px; right: 2px;"></i> display all</a>
             </h2>
-            <app-table></app-table>
+            <app-table [namesTableLable]="arrCurrency" [nameOfFolder]="'currency'" [itemsTable]="currencyExchangeBlackMartk"></app-table>
           </div>
     
         <div class="col-lg-5">
@@ -18,65 +19,23 @@
             <a routerLink="#" class="link-secondary">Central Bank of Egypt exchange rate</a>
             <a routerLink="#" class="link-dark fs-5 fw-normal "><i class="fa-solid fa-angle-right" style="position: relative; top: 1px; right: 2px;"></i>currency converter</a>
           </h2>
-        <app-table></app-table>
-        <br>
+          <app-table [namesTableLable]="arrCurrency" [nameOfFolder]="'currency'" [itemsTable]="currencyExchangeCenter"></app-table>
+          <br>
          <!-- <app-calculator></app-calculator> -->
       </div>
     </div>
 
     <div class="my-5">
-     
-        
       <div class="row mx-1 g-4">
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        <a routerLink="" class="border hover-bg-primary fw-medium d-block p-2 fs-6 d-flex gap-1">
-            <img [src]="imagesBase" alt="" style="width: 25; height: 25;">
-            <span class="text-dark fw-medium my-1"> Black Market</span>
-        </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <a routerLink="" class="border hover-bg-primary fw-medium d-block p-2 fs-6 d-flex gap-1">
-                <img src="./../../../../assets/imges/banks/ABDI.png" alt="" style="width: 25; height: 25;">
-                <span class="text-dark fw-medium my-1"> Black Market</span>
-            </a>
-        </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6"  *ngFor="let itme of exchangeBanks">
+            <div *ngIf="itme.imageUrl" class="banksBlock">
                 <a routerLink="" class="border hover-bg-primary fw-medium d-block p-2 fs-6 d-flex gap-1">
-                    <img src="./../../../../assets/imges/banks/ABDI.png" alt="" style="width: 25; height: 25;">
-                    <span class="text-dark fw-medium my-1"> Black Market</span>
+                    <img [src]="itme.imageUrl" alt="banks" style="width: 25; height: 25;">
+                    <span class="text-dark fw-medium my-1"> {{itme.namesBank}}</span>
                 </a>
             </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a routerLink="" class="border hover-bg-primary fw-medium d-block p-2 fs-6 d-flex gap-1">
-                        <img src="./../../../../assets/imges/banks/ABDI.png" alt="" style="width: 25; height: 25;">
-                        <span class="text-dark fw-medium my-1"> Black Market</span>
-                    </a>
-                </div>
-                    
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        5
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        6
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        7
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        8
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        9
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        10
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        11
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-        12
         </div>
       </div> 
      </div>
     </section>
+

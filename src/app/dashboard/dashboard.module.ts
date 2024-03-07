@@ -14,6 +14,9 @@ import { GoldCurreToCurreComponent } from './components/gold-curre-to-curre/gold
 import { MaterialModule } from '../material/material.module';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { AdsComponent } from './components/ads/ads.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CalculatorGramsComponent } from './components-ready/calculator-grams/calculator-grams.component';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -27,13 +30,16 @@ import { AdsComponent } from './components/ads/ads.component';
     EgExchangeRateAtAllBanksComponent,
     FooterComponent,
     GoldCurreToCurreComponent,
-    AdsComponent
+    AdsComponent,
+    CalculatorGramsComponent,
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     DashboardRoutingMoodule,
     MaterialModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }

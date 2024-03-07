@@ -1,7 +1,15 @@
-<div class="row justify-content-between">
+<div class="col-12 row ">
+    <div class="d-flex">
+        <a routerLink="/dashboard/home" class="link-dark fs-6 fw-normal text-primary">Home
+            <i class="fa-solid fa-angle-right link-dark" style="position: relative; top: 2px; right: 0px; margin:0px 5px ;"></i>
+        </a>
+        <p class="link-dark fs-6 fw-normal">Egypt gold prices</p>
+    </div> 
+</div>
+<!-- <div class="row justify-content-between">
     <div class="col-lg-7">
-        <div style="background-color: rgb(112, 53, 53); width: calc(100% - 20px);">
-            div 1
+        <div>
+            <img src="" alt="">
         </div>        
     </div>
 
@@ -11,4 +19,27 @@
             
         </div>
     </div>
-</div>
+</div> -->
+
+<section>
+    <div class="row justify-content-between">
+        <div class="col-lg-7">
+            <h1><img [src]="imagesBase" alt="EGY"> Egypt gold prices</h1>  
+            <p class="text-dark fw-medium fs-5">Live update for gold prices in Egypt
+
+            </p>
+            <p class="text-dark fw-medium"> <i class="fa-regular fa-clock text-muted margin-me-1"></i> {{ currentDate | date:'full' }}</p>
+            <div class="table">
+                <app-table [namesTableLable]="arrGold" [nameOfFolder]="'gold'" [itemsTable]="goldPrice"></app-table>
+            </div>
+            <div class="table-Egypt-gold-bars-accessories-prices my-5">
+                <h2>Egypt gold bars & accessories prices</h2>
+                <app-table [namesTableLable]="namesTableLabel"  [itemsTable]="goldPriceGrams"></app-table>
+            </div>
+          </div>
+    
+        <div class="col-lg-5">
+          <app-calculator-grams></app-calculator-grams>
+        </div> 
+    </div> 
+</section>

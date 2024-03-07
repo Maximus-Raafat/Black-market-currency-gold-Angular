@@ -4,16 +4,19 @@
             <div class="container">
               <div class="row g-2 algin-items-center">
                 <div class="col-5">
-                  <section class="form-control border-primary shadow-none">
-                    <option value="63.16">USD</option>
-                  </section>
+                  <select [(ngModel)]="selectedValueFrom" class="form-select" name="currency" aria-label="Default select example ">
+                    <option disabled>Select Curreny</option>
+                    <option selected 
+                     *ngFor="let item of currencyItem" [value]="item.iconName">{{item.iconName}}
+                    </option>
+                  </select>
                 </div>
                 <div class="col-2 text-center">
-                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i (click)="changeTheCurrency()" style="cursor: pointer;" class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
                 <div class="col-5">
                   <section class="form-control border-primary shadow-none">
-                    <option value="63.16">EGY</option>
+                    <option [value]="selectedValueTo">{{selectedValueTo}}</option>
                   </section>
                 </div>
                 <div class="col-5">
@@ -24,20 +27,21 @@
                  <b id="">To</b>
                 </div>
                 <div class="col-5">
-                  <input type="number" min="0" value="1" class="form-control shadow-none" placeholder="enter amount">
+                  <input type="number" [(ngModel)]="inputFrom" min="0" value="1" class="form-control shadow-none" placeholder="enter amount" (change)="checkValueFrom()">
                  </div>
                  <div class="col-2 text-center">
                   <i class="fa-solid fa-equals"></i>
                  </div>
                  <div class="col-5">
-                  <input type="number" min="0" value="63.16" class="form-control shadow-none" placeholder="enter amount">
+                  <input type="number" [(ngModel)]="inputTo" min="0" value="30.96" class="form-control shadow-none" placeholder="enter amount" (change)="checkValueTo()">
                  </div>
               </div>
               <div class="col-12">
                 <p class="border-top mt-5 pt-3 text-center h4 lh-1">
-                  1 USD = 63.16EGP
+                  {{multiplicationCurrany}}
                 </p>
               </div>
             </div>
           </div>
     </section>
+

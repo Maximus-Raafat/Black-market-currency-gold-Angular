@@ -38,19 +38,30 @@
 
 <div class="row justify-content-between">
     <div class="col-lg-7">
+      <div class="d-flex">
+        <a routerLink="/dashboard/home" class="link-dark fs-6 fw-normal text-primary">Home
+            <i class="fa-solid fa-angle-right link-dark" style="position: relative; top: 2px; right: 0px; margin:0px 5px ;"></i>
+        </a>
+        <a routerLink="/dashboard/home" class="link-dark fs-6 fw-normal text-primary">Egypt gold prices
+          <i class="fa-solid fa-angle-right link-dark" style="position: relative; top: 2px; right: 0px; margin:0px 5px ;"></i>
+      </a>
+        <p class="link-dark fs-6 fw-normal">{{data.param1.karat}}</p>
+    </div> 
+    <h1>
+      <img src="" alt=""> {{data.param1.karat}} / Egyptian Pound
+    </h1>
+    <p class="text-dark fw-medium"> <i class="fa-regular fa-clock text-muted margin-me-1"></i> {{ currentDate | date:'full' }}</p>
         <div style="overflow: hidden;">
                 <h1 class="h3">EUR / EGP | Black Market</h1>
                 <p class="text-muted fw-bold m-0">gold ounce price in Egypt</p>
                 <p class="d-flex flex-wrap fs-6 m-0 my-5 gap-3 align-items-center ">
-                  <b class="fw-bolder" style="font-size: 4rem;" >129,734 </b>
+                  <b class="fw-bolder" style="font-size: 4rem;" >{{data.param1.buy}}</b>
                   <b class="d-flex flex-wrap gap-3">
                       <span class="text-success">0.01392%</span>
                       <span class="text-success">1781</span>
                   </b>
                 </p>
-                <p class="fs-6">Sell Price: <b>126,180 EGP</b>      </p>
-                <p><i class="fa-regular fa-clock text-muted margin-me-1"></i> today time -..</p>
-          
+                <p class="fs-6">Sell Price: <b>{{data.param1.sell}}</b></p>          
                 <div class="row g-3 my-2" >
                   <div class="col-lg-6 col-12">
                     <h2 class="hr-lines"></h2>
@@ -118,8 +129,8 @@
                   </div>
             </div>            
         </div>
-        <div>
-          <app-calculator></app-calculator>
+        <div >
+          <app-calculator-grams></app-calculator-grams>
         </div>
       
     </div>
@@ -128,15 +139,10 @@
 
       <div class="col-7">
         <div class="Exchange rate of Swedish Krona in all Egyptian banks">
-          <h4 style="font-size: 1.45rem;">Exchange rate of Swedish Krona in all Egyptian banks</h4>
-          <app-table></app-table>
+            <h2>Egypt gold bars & accessories prices</h2>
+            <app-table [namesTableLable]="['Bar','Buy','Sell']"  [itemsTable]="data.param2"></app-table>
          </div>
       </div>
-     <div class="col-5">
-        <h4 style="font-size: 1.45rem;">SEK to EGP in Black Market
-        </h4>
-        <app-table></app-table>
-    </div>
     </div>
     
 </div>

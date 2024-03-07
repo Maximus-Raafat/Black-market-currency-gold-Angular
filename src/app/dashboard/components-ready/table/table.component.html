@@ -1,61 +1,22 @@
 <table class="table table-hover custom-table">
     <thead>
       <tr>
-        <th scope="col">Gold</th>
-        <th scope="col">Buy</th>
-        <th scope="col">Sell</th>
+        <th scope="col" *ngFor="let itmeName of namesTableLable">{{itmeName}}</th>
       </tr>
     </thead>
     <tbody class="custom-tbody">
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
-      </tr>
-      <tr>
-        <td>24-Karat gold</td>
-        <td>4,000</td>
-        <td>3,886</td>
+      <tr *ngFor="let item of itemsTable" (click)="navigateToDetails(item)">
+        <td>
+          <img *ngIf="item.imageUrl" src="{{ item.imageUrl }}" alt="countries" style="width: 25px;height: 25px;">
+            <ng-container *ngIf="item['currency']; else otherTemplate">
+              {{ item['currency'] }}
+            </ng-container>
+            <ng-template #otherTemplate>
+              {{ item['karat'] }}
+            </ng-template>
+        </td>
+        <td>{{ item.buy }}</td>
+        <td>{{ item.sell }}</td>
       </tr>
     </tbody>
   </table>

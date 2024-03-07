@@ -14,10 +14,9 @@ const routes: Routes = [
         children: [
           {path:"home",component:HomeComponent},
           {path:"gold",component:GoldComponent},
+          {path:'goldCurreToCurre/:id', component: GoldCurreToCurreComponent },
           {path:"exchange-rate",component:ExchangeRateComponent},
           {path:"markt-exchange",component:MarketExchangeComponent},
-          {path:"goldCurreToCurre",component:GoldCurreToCurreComponent},
-
         ]
       }
 ];

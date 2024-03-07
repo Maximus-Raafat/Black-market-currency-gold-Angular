@@ -16,6 +16,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, MatRippleModule, MAT_DATE_LOCALE} from '@angular/material/core';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   imports: [],
@@ -36,7 +37,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     MatDatepickerModule,
     MatSortModule,
     MatTableModule,
-    NgApexchartsModule
+    NgApexchartsModule,
   ],
 })
 
