@@ -50,16 +50,11 @@ ngAfterViewInit(): void {
   // this.checkon();
 }
 deleteProperty(): void {
-  if (this.data.param2[0].imageUrl) {
     this.data.param2.forEach((item:any) => {
       delete item.iconName;
+      delete item.imageUrl;
     });
-    
-  } else{
-    console.log("DON'T HAS A DATA");
-  }
-
-}
+  } 
 
 
 chartData(){

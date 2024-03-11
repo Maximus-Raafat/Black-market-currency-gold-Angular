@@ -4,7 +4,7 @@
             <div class="container">
               <div class="row g-2 algin-items-center">
                 <div class="col-5">
-                  <select [(ngModel)]="selectedValueFrom" class="form-select" name="currency" aria-label="Default select example ">
+                  <select [(ngModel)]="selectedValueFrom" (change)="checkValueFrom()" class="form-select" name="currency" aria-label="Default select example ">
                     <option disabled>Select Curreny</option>
                     <option selected 
                      *ngFor="let item of currencyItem" [value]="item.iconName">{{item.iconName}}
@@ -38,7 +38,7 @@
               </div>
               <div class="col-12">
                 <p class="border-top mt-5 pt-3 text-center h4 lh-1">
-                  {{multiplicationCurrany}}
+                  {{inputFrom}} {{selectedValueTo}} = {{multiplicationCurrany}} {{selectedValueFrom}} {{inputTo}}
                 </p>
               </div>
             </div>

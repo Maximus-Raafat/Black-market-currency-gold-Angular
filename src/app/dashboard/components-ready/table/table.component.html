@@ -5,7 +5,7 @@
       </tr>
     </thead>
     <tbody class="custom-tbody">
-      <tr *ngFor="let item of itemsTable" (click)="navigateToDetails(item)">
+      <!-- <tr *ngFor="let item of itemsTable" (click)="navigateToDetails(item)">
         <td>
           <img *ngIf="item.imageUrl" src="{{ item.imageUrl }}" alt="countries" style="width: 25px;height: 25px;">
             <ng-container *ngIf="item['currency']; else otherTemplate">
@@ -17,6 +17,37 @@
         </td>
         <td>{{ item.buy }}</td>
         <td>{{ item.sell }}</td>
-      </tr>
+      </tr> -->
+      <ng-container *ngIf="hasImage();else elseCondtion">
+        <tr *ngFor="let item of itemsTable" (click)="navigateToDetails(item)">
+          <td>
+            <img *ngIf="item.imageUrl" [src]="item.imageUrl" alt="countries" style="width: 25px;height: 25px;">
+              <ng-container *ngIf="item['currency']; else otherTemplate">
+                {{ item['currency'] }}
+              </ng-container>
+              <ng-template #otherTemplate>
+                {{ item['karat'] }}
+              </ng-template>
+          </td>
+          <td>{{ item.buy }}</td>
+          <td>{{ item.sell }}</td>
+        </tr>
+      </ng-container>
+
+      <ng-template #elseCondtion>
+        <tr *ngFor="let item of itemsTable">
+          <td>
+            <img *ngIf="item.imageUrl" [src]="item.imageUrl" alt="countries" style="width: 25px;height: 25px;">
+              <ng-container *ngIf="item['currency']; else otherTemplate">
+                {{ item['currency'] }}
+              </ng-container>
+              <ng-template #otherTemplate>
+                {{ item['karat'] }}
+              </ng-template>
+          </td>
+          <td>{{ item.buy }}</td>
+          <td>{{ item.sell }}</td>
+        </tr>
+      </ng-template>
     </tbody>
   </table>

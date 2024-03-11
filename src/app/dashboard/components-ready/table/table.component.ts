@@ -15,11 +15,13 @@ export class TableComponent implements OnInit, OnChanges{
 
 constructor(private router: Router) {}
 
-ngOnInit(): void { }
+ngOnInit(): void { 
+  console.log(this.itemsTable)
+}
 
 ngOnChanges(changes: SimpleChanges): void {
   if (changes['itemsTable'] && changes['itemsTable'].currentValue) {
-    this.loadCountryImages();
+    this.loadCountryImages(); 
   }
 }
 
@@ -46,13 +48,14 @@ checkImageExists(imageName: string): Promise<boolean> {
 }
  navigateToDetails(data:any){
   console.log("data before navigate",this.itemsTable); 
-
   const combinedObjects = { param1: data, param2: this.itemsTable };
   const id : number = +data.id;
   this.router.navigate(['/dashboard/goldCurreToCurre',id], { state: { data: combinedObjects } });
 }
 
 
-
+hasImage(): boolean {
+  return this.itemsTable.some((item:any) => !!item.imageUrl);
+}
 
 }
