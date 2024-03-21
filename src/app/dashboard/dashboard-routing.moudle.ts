@@ -6,12 +6,14 @@ import { ExchangeRateComponent } from './components/exchange-rate/exchange-rate.
 import { GoldComponent } from './components/gold/gold.component';
 import { MarketExchangeComponent } from './components/market-exchange/market-exchange.component';
 import { GoldCurreToCurreComponent } from './components/gold-curre-to-curre/gold-curre-to-curre.component';
+import { TranslationResolver } from '../translationResolver/translation-resolver.service';
 const routes: Routes = [ 
 
     {
         path: "",
         component: LayoutComponent,
         children: [
+          //resolve: { translations: TranslationResolver } what is the relsove 
           {path:"home",component:HomeComponent},
           {path:"gold",component:GoldComponent},
           {path:'goldCurreToCurre/:id', component: GoldCurreToCurreComponent },

@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { environment } from 'src/environments/environments';
 import { ServiceService } from '../../service/service.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { cloneDeep } from 'lodash';
 
 interface Calculator {
   selectedValue: any;
@@ -17,12 +19,16 @@ export class GoldComponent implements OnInit, AfterViewInit{
     selectedValue: 0,
     inputValue: 1,
   }];
+  listNametranslateGold:any = ['24-krat','18-krat','goldOunce','21-krat','22-krat','goldPound','14-krat','12-krat','9-krat',];
+  listNametranslateBar:any = ['0.25','0.5','1','2.5','5','10','25','50','100','1000'];
   isSell: boolean = false;
   calculateThePrice:number=0;
   imagesBase:string;  
   currentDate!: Date;
   arrGold = ['Gold', 'Buy', 'Sell'];
   goldPrice:any[] = [];
+  goldPriceItems:any[] = [];
+
   goldPriceGrams:any[]=[];
   namesTableLabel = ['Bar','Buy','Sell'];
   karatArayNum:any = [
@@ -53,7 +59,7 @@ export class GoldComponent implements OnInit, AfterViewInit{
     1000
   ]
   
-    constructor(private service:ServiceService, private elementRef: ElementRef){
+    constructor(private service:ServiceService, private elementRef: ElementRef,private translate:TranslateService ){
       this.currentDate = new Date();
       this.imagesBase = environment.imageBase + 'currency/EGP.png';
     }
@@ -66,6 +72,7 @@ export class GoldComponent implements OnInit, AfterViewInit{
     getGold():void {
       this.service.getGold().subscribe(data=>{
         this.goldPrice = data;
+        this.translateGoldname(data)
         this.changeTables(1);
       },err=>{
           console.log(err);
@@ -111,9 +118,12 @@ export class GoldComponent implements OnInit, AfterViewInit{
             }
             this.goldPriceGrams.push(item);
         }
-          console.log("gold price ",this.goldPriceGrams)
-        }
-      })
+      }
+    })
+    // this.translateGoldname(data)
+
+    console.log("gold price ",this.goldPriceGrams)
+    this.translateGoldnameBar(this.goldPriceGrams);
     }
 
 
@@ -123,5 +133,41 @@ export class GoldComponent implements OnInit, AfterViewInit{
       console.log(hours);
     }
       
-    
+    translateGoldname(data: any[]): void {
+      let arrayItems: any[] = [];
+      for (let i = 0; i < data.length; i++) {
+          this.translate.get(`home.tableGoldKrat.${this.listNametranslateGold[i]}`).subscribe(
+              (translation: any) => {
+                  // Create a new object to hold the translated value
+                  let newItem = { ...data[i] }; // Spread syntax to clone object
+                  newItem.karat = translation;
+                  arrayItems.push(newItem);
+              },
+              (error: any) => {
+                  console.log("error from the translation Item = = = >", error);
+              }
+          );
+      }
+      this.goldPriceItems = arrayItems
+
+    }
+    translateGoldnameBar(data: any[]): void {
+      let arrayItems: any[] = [];
+      for (let i = 0; i < data.length ; i++) {
+          this.translate.get(`gold.EgyptGoldBars&AccessoriesPrices.${this.listNametranslateBar[i]}`).subscribe(
+              (translation: any) => {
+                  // Create a new object to hold the translated value
+                  let newItem = { ...data[i] }; // Spread syntax to clone object
+                  newItem.karat = translation;
+                  arrayItems.push(newItem);
+              },
+              (error: any) => {
+                  console.log("error from the translation Item = = = >", error);
+              }
+          );
+      }
+      console.log(arrayItems)
+      this.goldPriceGrams = arrayItems
+
+    }
 }

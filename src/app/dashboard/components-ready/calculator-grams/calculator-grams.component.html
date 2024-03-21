@@ -1,7 +1,7 @@
 
   <section id="calculator">
     <div class="text-bg-dark rounded-1 p-4">
-      <h3 class="mb-3">Egypt gold calculator</h3>
+      <h3 class="mb-3">{{"gold.EgyptGoldCalculator" | translate}}</h3>
       <div class="container">
         <div class="row g-2 algin-items-center">
           <div class="parent">
@@ -17,12 +17,12 @@
             </div>
             <div class="btns col-12 d-flex mt-5">
                 <div class="add&Calculate col-5 d-flex justify-content-between">
-                    <button (click)="addCalculator()" class="btn btn-light" >Add</button>
-                    <button (click)="calculate()" class="btn btn-warning" >Calculate</button>
+                    <button (click)="addCalculator()" class="btn btn-light" >{{"gold.buttonAdd" | translate}}</button>
+                    <button (click)="calculate()" class="btn btn-warning" >{{"gold.buttoncalculatoe" | translate}}</button>
                 </div>
                 <div class="form-check form-switch col-6 d-flex justify-content-end mt-2">
                     <input class="form-check-input fs-5 mx-2 " type="checkbox" id="flexSwitchCheckDefault" [(ngModel)]="isSell">
-                    <label class="form-check-label mt-1" for="flexSwitchCheckDefault">Sell</label>
+                    <label class="form-check-label mt-1" for="flexSwitchCheckDefault">{{"gold.buttonSell" | translate}}</label>
                 </div>
             </div>
         </div>
@@ -42,17 +42,17 @@
 
     <div class="card my-4">
         <div class="card-body">
-          <h5 class="card-title text-success fs-5 fw-bold mt-3 mb-4">Gold</h5>
+          <h5 class="card-title text-success fs-5 fw-bold mt-3 mb-4">{{"gold.titleCardgold" | translate}}</h5>
           <p class="card-text text-muted fs-6" style="line-height: 1.8rem;">
-            Gold plays an important and influential role in the economy at both the local and global levels. It determines the economic strength of countries based on the amount of gold they possess. Gold serves as a safe haven for investors and individuals, whether the goal is to preserve the value of money and savings or to invest and profit. The quality of gold is measured in carats or karats, which indicate the purity of gold. There are many units of measurement for gold.
+            {{"gold.cardsGold" | translate}}
           </p>
         </div>
       </div>
       <div class="card my-4">
         <div class="card-body">
-          <h5 class="card-title text-success fs-5 fw-bold mt-3 mb-4">Egyptian Pound</h5>
+          <h5 class="card-title text-success fs-5 fw-bold mt-3 mb-4">            {{"gold.titleCardPound" | translate}}
+          </h5>
           <p class="card-text text-muted fs-6" style="line-height: 1.8rem;">
-            The Egyptian Pound is the official currency of the Arab Republic of Egypt. It is denoted by the currency code EGP. The Egyptian Pound is further divided into smaller units called piasters or qirsh, with 100 piasters equaling 1 EGP. The currency is issued and regulated by the Central Bank of Egypt.
-          </p>
+            {{"gold.cardspound" | translate}}          </p>
         </div>
       </div>

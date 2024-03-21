@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ServiceService } from './dashboard/service/service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,21 @@ import { ServiceService } from './dashboard/service/service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit  {
-  title = 'currency-Convert';
-  
-  constructor(private service:ServiceService){
+  lang:any;
+
+  constructor(private translate: TranslateService) {
+    this.trnalsetet() 
   }
   ngOnInit(): void {
-    // this.service.getData();
+
+  }
+  trnalsetet() : void{
+    if ("language" in localStorage) {
+      this.lang = localStorage.getItem("language")
+      console.log(this.lang)
+       this.translate.use(this.lang);
+    } else {
+      this.translate.use(this.translate.defaultLang);
+    }
   }
 }

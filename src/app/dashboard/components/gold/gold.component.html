@@ -1,9 +1,9 @@
 <div class="col-12 row ">
     <div class="d-flex">
-        <a routerLink="/dashboard/home" class="link-dark fs-6 fw-normal text-primary">Home
+        <a routerLink="/dashboard/home" class="link-dark fs-6 fw-normal text-primary">{{"gold.linkHome" | translate}}
             <i class="fa-solid fa-angle-right link-dark" style="position: relative; top: 2px; right: 0px; margin:0px 5px ;"></i>
         </a>
-        <p class="link-dark fs-6 fw-normal">Egypt gold prices</p>
+        <p class="link-dark fs-6 fw-normal">{{"gold.EgyptGoldPrices" | translate}}</p>
     </div> 
 </div>
 <!-- <div class="row justify-content-between">
@@ -24,16 +24,16 @@
 <section>
     <div class="row justify-content-between">
         <div class="col-lg-7">
-            <h1><img [src]="imagesBase" alt="EGY"> Egypt gold prices</h1>  
-            <p class="text-dark fw-medium fs-5">Live update for gold prices in Egypt
+            <h1><img [src]="imagesBase" alt="EGY"> {{"gold.EgyptGoldPrices" | translate}}</h1>  
+            <p class="text-dark fw-medium fs-5">{{"gold.LiveUpdateForGoldPrices" | translate}}
 
             </p>
             <p class="text-dark fw-medium"> <i class="fa-regular fa-clock text-muted margin-me-1"></i> {{ currentDate | date:'full' }}</p>
             <div class="table">
-                <app-table [namesTableLable]="arrGold" [nameOfFolder]="'gold'" [itemsTable]="goldPrice"></app-table>
+                <app-table [namesTableLable]="arrGold" [nameOfFolder]="'gold'" [itemsTable]="goldPriceItems"></app-table>
             </div>
             <div class="table-Egypt-gold-bars-accessories-prices my-5">
-                <h2>Egypt gold bars & accessories prices</h2>
+                <h2>{{"gold.EgyptGoldBars&accessorieSprices" | translate}}</h2>
                 <app-table [namesTableLable]="namesTableLabel"  [itemsTable]="goldPriceGrams"></app-table>
             </div>
           </div>
