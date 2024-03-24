@@ -1,0 +1,142 @@
+{
+   "home":{
+    "Gold":"Gold",
+    "Buy":"Buy",
+    "Sell":"Sell",
+    "Bar":"bar",
+    "Currency":"Currency",
+     "titleGoldPrice":"Egypt gold prices",
+     "titleGoldCalculator":"gold calculator",
+     "titleBlackMarketEchange":"Black Market ExChange rate",
+     "titleDisplayAll":"Display All",
+     "CentralBankofEgyptexchange":"Central Bank of Egypt exchange rate",
+     "CurrencyConverter":"Currency converter",
+     "tableGoldKrat":{
+        "24-krat":"24-karat gold",
+        "18-krat":"18-karat gold",
+        "goldOunce":"Gold Ounce",
+        "21-krat":"21-karat gold",
+        "22-krat":"22-karat gold",
+        "goldPound":"Gold Pound",
+        "14-krat":"14-karat gold",
+        "12-krat":"12-karat gold",
+        "9-krat":"9-karat gold"
+     },
+     "tableBlackMarket":{
+        "Us":"US Dollar",
+        "Sa":"Saudia Riyal",
+        "Eur":"Euro",
+        "UAE":"UAE Dirham",
+        "KUW":"Kuwaiti Dinar",
+        "PoundSterling":"Pound Sterling"
+     },
+     "tableCentralBank":{
+        "Us":"US Dollar",
+        "Sa":"Saudia Riyal",
+        "Eur":"Euro",
+        "UAE":"UAE Dirham",
+        "KUW":"Kuwaiti Dinar",
+        "PoundSterling":"Pound Sterling",
+        "Oma":"Omani Riyal",
+        "QAT":"Qatari Riyal",
+        "Can":"Canadian Dinar",
+        "jor":"jordain Dinar",
+        "Aus":"Australinan Dollar",
+        "Bah":"Bahraini Dinar",
+        "Swi":"Swiss Franc",
+        "Ja":"Japanese Yen",
+        "Swe":"Swedish Koren",
+        "Dan":"Danish Krone",
+        "Nor":"Norwegian Koren"
+     },
+     "tableNamesBank":{
+        "blackMarket":"Black Market",
+        "CentralBankSofEgypt":"Central Banks of Egypt",
+        "NationalBanksOfEgypt":"National Banks of Egypt",
+        "BanqueMisr":"Banque Misr",
+        "AbuDhabiIslamicBank":"Abu Dhabi Islamic Bank",
+        "BanqueDuCairo":"Banque Du Cairo",
+        "BankOfAlecandria":"Bank Of Alecandria",
+        "CreditAgricole":"Credit Agricole",
+        "EgyptianGulfBank":"Egyptian Gulf Bank",
+        "CIBBank":"CIB Bank",
+        "QNBBank":"QNB Bank",
+        "AlAlhiBankKuwait":"Al Alhi Bank Kuwait",
+        "BlomBank":"Blom Bank",
+        "ArabInvestemntBank":"Arab Investemnt Bank",
+        "HSBCBank":"HSBC Bank",
+        "ALBarakaBank":"AL baraka Bank",
+        "ArabInterninatlBank":"Arab Interninatl Bank",
+        "NationalBankOfKuwait":"National Bank Of Kuwait",
+        "SuezCanalBank":"Suez Canal Bank",
+        "EgyptionArabLandBank":"Egyption Arab Land Bank",
+        "TheunitedBank":"The united Bank",
+        "NationalBankOfGreeceEgypt":"National Bank Of Greece Egypt",
+        "SAIBBank":"SAIB Bank",
+        "InduestrailDevelopmentBank":"Induestrail Development Bank"
+     }
+    },
+    "exchangeRate":{
+      "linkHome":"Home",
+      "CentralBankOfEgypt":"Central Bank of Egypt exchange rate",
+      "Selectacountry":"Select a country",
+      "titleExchange":"EGP exchange rate at all banks",
+      "titleForLive":"Live update for EGP exchange rate at Central Bank of Egypt",
+      "calulator":"Currency Converter",
+      "form":"form",
+      "to":"to",
+      "cards":{
+         "titleEgyptian":"Egyptian Pound",
+         "phargrapheCards":"The Egyptian Pound is the official currency of the Arab Republic of Egypt. It is denoted by the currency code EGP. The Egyptian Pound is further divided into smaller units called piasters or qirsh, with 100 piasters equaling 1 EGP. The currency is issued and regulated by the Central Bank of Egypt."
+      }
+    },
+    "marketChange":{
+      "linkHome":"Home",
+      "CentralBankOfEgypt":"Black Market exchange rate",
+      "Selectacountry":"Select a country",
+      "titleExchange":"EGP exchange rate at all banks",
+      "titleForLive":"Live update for EGP exchange rate at Central Bank of Egypt",
+      "calulator":"Currency Converter",
+      "form":"form",
+      "to":"to",
+      "cards":{
+         "titleEgyptian":"Egyptian Pound",
+         "phargrapheCards":"The Egyptian Pound is the official currency of the Arab Republic of Egypt. It is denoted by the currency code EGP. The Egyptian Pound is further divided into smaller units called piasters or qirsh, with 100 piasters equaling 1 EGP. The currency is issued and regulated by the Central Bank of Egypt."
+      }
+   },
+      "gold":{
+      "linkHome":"Home",
+      "EgyptGoldPrices":"Egypt gold prices",
+      "LiveUpdateForGoldPrices":"Live update for gold prices in Egypt",
+      "EgyptGoldBars&accessorieSprices":"Egypt gold bars & accessories prices",
+      "EgyptGoldBars&AccessoriesPrices":{
+         "0.25":"0.25 gold grams bar 24 Karat",
+         "0.5":"0.5 gold grams bar 24 Karat",
+         "1":"1 gold grams bar 24 Karat",
+         "2.5":"2.5 gold grams bar 24 Karat",
+         "5":"5 gold grams bar 24 Karat",
+         "10":"10 gold grams bar 24 Karat",
+         "25":"25 gold grams bar 24 Karat",
+         "50":"50 gold grams bar 24 Karat",
+         "100":"100 gold grams bar 24 Karat",
+         "1000":"1000 gold grams bar 24 Karat"
+      },
+      "EgyptGoldCalculator":"Egypt gold calculator",
+      "buttonAdd":"Add",
+      "buttoncalculatoe":"calculatoe",
+      "buttonSell":"Sell",
+      "EGXPriceGoldOunce":"EGX Price ( Gold Ounce )108,490Egyptian Pound",
+      "titleCardgold":"Gold",
+      "cardsGold":"Gold plays an important and influential role in the economy at both the local and global levels. It determines the economic strength of countries based on the amount of gold they possess. Gold serves as a safe haven for investors and individuals, whether the goal is to preserve the value of money and savings or to invest and profit. The quality of gold is measured in carats or karats, which indicate the purity of gold. There are many units of measurement for gold.",
+      "titleCardPound":"Egyptian Pound",
+      "cardspound":"The Egyptian Pound is the official currency of the Arab Republic of Egypt. It is denoted by the currency code EGP. The Egyptian Pound is further divided into smaller units called piasters or qirsh, with 100 piasters equaling 1 EGP. The currency is issued and regulated by the Central Bank of Egypt."
+      },
+    "layout&Footer":{
+        "titleHeader":"Black Markt",
+        "home":"Home",
+        "exchangeRate":"Exchange Rate",
+        "marktExchange":"Market ExChange",
+        "gold":"Gold",
+        "lang":"Eng"
+    }
+ }
